@@ -17,13 +17,6 @@ public class Civilizations {
     private String unique_technologies;
     private String unique_buildings;
 
-    public Civilizations(){}
-
-    public Civilizations(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
     public Long getId() {
         return id;
     }
