@@ -1,5 +1,6 @@
 package br.com.age2deapi.controller;
 
+import br.com.age2deapi.controller.dto.CivilizationsDto;
 import br.com.age2deapi.model.Civilizations;
 import br.com.age2deapi.repository.CivilizationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,9 @@ public class CivilizationsController {
     CivilizationsRepository civilizationRepository;
 
     @GetMapping("/civilizations")
-    public List<Civilizations> getAllCivilizations(){
+    public List<CivilizationsDto> getAllCivilizations(){
         List<Civilizations> civilizationList = civilizationRepository.findAll();
-        return civilizationList;
+        return CivilizationsDto.convertToDto(civilizationList);
     }
 }
 
