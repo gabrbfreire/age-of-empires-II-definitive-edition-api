@@ -1,31 +1,25 @@
-package model;
+package br.com.age2deapi.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-public class Civilization {
+public class Civilizations {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
     private String introduced_in;
     private String architecture;
     private String continent;
-    @ElementCollection
-    private List<String> focus;
-    @ElementCollection
-    private List<String> unique_units;
-    @ElementCollection
-    private List<String> unique_technologies;
-    @ElementCollection
-    private List<String> unique_buildings;
+    private String focus;
+    private String unique_units;
+    private String unique_technologies;
+    private String unique_buildings;
 
-    public Civilization(){}
+    public Civilizations(){}
 
-    public Civilization(Long id, String name) {
+    public Civilizations(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -34,24 +28,12 @@ public class Civilization {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getIntroduced_in() {
@@ -78,35 +60,35 @@ public class Civilization {
         this.continent = continent;
     }
 
-    public List<String> getFocus() {
+    public String getFocus() {
         return focus;
     }
 
-    public void setFocus(List<String> focus) {
+    public void setFocus(String focus) {
         this.focus = focus;
     }
 
-    public List<String> getUnique_units() {
+    public String getUnique_units() {
         return unique_units;
     }
 
-    public void setUnique_units(List<String> unique_units) {
+    public void setUnique_units(String unique_units) {
         this.unique_units = unique_units;
     }
 
-    public List<String> getUnique_technologies() {
+    public String getUnique_technologies() {
         return unique_technologies;
     }
 
-    public void setUnique_technologies(List<String> unique_technologies) {
+    public void setUnique_technologies(String unique_technologies) {
         this.unique_technologies = unique_technologies;
     }
 
-    public List<String> getUnique_buildings() {
+    public String getUnique_buildings() {
         return unique_buildings;
     }
 
-    public void setUnique_buildings(List<String> unique_buildings) {
+    public void setUnique_buildings(String unique_buildings) {
         this.unique_buildings = unique_buildings;
     }
 }

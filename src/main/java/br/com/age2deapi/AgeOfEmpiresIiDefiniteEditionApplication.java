@@ -1,4 +1,4 @@
-package br.com.ageofempires2deapi;
+package br.com.age2deapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
