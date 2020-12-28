@@ -4,7 +4,6 @@ import br.com.age2deapi.model.Civilizations;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CivilizationsDto {
 

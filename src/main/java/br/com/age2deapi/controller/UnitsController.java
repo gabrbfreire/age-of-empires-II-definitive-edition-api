@@ -1,8 +1,6 @@
 package br.com.age2deapi.controller;
 
-import br.com.age2deapi.controller.dto.TechnologiesDto;
 import br.com.age2deapi.controller.dto.UnitsDto;
-import br.com.age2deapi.model.Technologies;
 import br.com.age2deapi.model.Units;
 import br.com.age2deapi.repository.UnitsRepository;
 import org.springframework.beans.factory.annotation.Autowired;

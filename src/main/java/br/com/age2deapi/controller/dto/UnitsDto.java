@@ -1,6 +1,5 @@
 package br.com.age2deapi.controller.dto;
 
-import br.com.age2deapi.model.Civilizations;
 import br.com.age2deapi.model.Units;
 
 import java.util.ArrayList;
