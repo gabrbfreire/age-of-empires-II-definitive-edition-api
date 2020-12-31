@@ -20,14 +20,14 @@ public class TechnologiesController {
     @GetMapping("/technologies")
     @Cacheable(value = "getAllTechnologies")
     public List<TechnologiesDto> getAllTechnologies(){
-        List<Technologies> technologiesList = technologiesRepository.findAll();
+        List<Technologies> technologiesList = technologiesRepository.findAllByOrderByName();
         return TechnologiesDto.convertToDto(technologiesList);
     }
 
     @GetMapping("/technologies/{name}")
     @Cacheable(value = "getTechnologiesByName")
     public List<TechnologiesDto> getTechnologiesByName(@PathVariable String name){
-        List<Technologies> technologiesList = technologiesRepository.findAllByNameContaining(name);
+        List<Technologies> technologiesList = technologiesRepository.findAllByNameContainingOrderByName(name);
         return TechnologiesDto.convertToDto(technologiesList);
     }
 }

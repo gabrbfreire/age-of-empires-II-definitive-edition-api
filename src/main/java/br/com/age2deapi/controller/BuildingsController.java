@@ -20,14 +20,14 @@ public class BuildingsController {
     @GetMapping("/buildings")
     @Cacheable(value = "getAllBuildings")
     public List<BuildingsDto> getAllBuildings(){
-        List<Buildings> buildingsList = buildingsRepository.findAll();
+        List<Buildings> buildingsList = buildingsRepository.findAllByOrderByName();
         return BuildingsDto.convertToDto(buildingsList);
     }
 
     @GetMapping("/buildings/{name}")
     @Cacheable(value = "getBuildingsByName")
     public List<BuildingsDto> getBuildingsByName(@PathVariable String name){
-        List<Buildings> buildingsList = buildingsRepository.findAllByNameContaining(name);
+        List<Buildings> buildingsList = buildingsRepository.findAllByNameContainingOrderByName(name);
         return BuildingsDto.convertToDto(buildingsList);
     }
 }

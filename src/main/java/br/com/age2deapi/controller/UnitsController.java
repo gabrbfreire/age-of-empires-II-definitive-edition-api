@@ -20,14 +20,14 @@ public class UnitsController {
     @GetMapping("/units")
     @Cacheable(value = "getAllUnits")
     public List<UnitsDto> getAllUnits(){
-        List<Units> unitsList = unitsRepository.findAll();
+        List<Units> unitsList = unitsRepository.findAllByOrderByName();
         return UnitsDto.convertToDto(unitsList);
     }
 
     @GetMapping("/units/{name}")
     @Cacheable(value = "getUnitsByName")
     public List<UnitsDto> getUnitsByName(@PathVariable String name){
-        List<Units> unitsList = unitsRepository.findAllByNameContaining(name);
+        List<Units> unitsList = unitsRepository.findAllByNameContainingOrderByName(name);
         return UnitsDto.convertToDto(unitsList);
     }
 }

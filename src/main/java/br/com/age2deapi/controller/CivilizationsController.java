@@ -20,14 +20,14 @@ public class CivilizationsController {
     @GetMapping("/civilizations")
     @Cacheable(value = "getAllCivilizations")
     public List<CivilizationsDto> getAllCivilizations(){
-        List<Civilizations> civilizationList = civilizationRepository.findAll();
+        List<Civilizations> civilizationList = civilizationRepository.findAllByOrderByName();
         return CivilizationsDto.convertToDto(civilizationList);
     }
 
     @GetMapping("/civilizations/{name}")
     @Cacheable(value = "getCivilizationsByName")
     public List<CivilizationsDto> getCivilizationsByName(@PathVariable String name){
-        List<Civilizations> civilizationsList = civilizationRepository.findAllByNameContaining(name);
+        List<Civilizations> civilizationsList = civilizationRepository.findAllByNameContainingOrderByName(name);
         return CivilizationsDto.convertToDto(civilizationsList);
     }
 }

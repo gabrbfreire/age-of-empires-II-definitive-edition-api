@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface BuildingsRepository extends JpaRepository<Buildings, Long> {
 
-    List<Buildings> findAllByNameContaining(String name);
+    List<Buildings> findAllByOrderByName();
+
+    List<Buildings> findAllByNameContainingOrderByName(String name);
 }
