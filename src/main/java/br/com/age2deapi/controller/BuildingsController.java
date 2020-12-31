@@ -27,7 +27,7 @@ public class BuildingsController {
     @GetMapping("/buildings/{name}")
     @Cacheable(value = "getBuildingsByName")
     public List<BuildingsDto> getBuildingsByName(@PathVariable String name){
-        List<Buildings> buildingsList = buildingsRepository.findAllByNameContainingOrderByName(name);
+        List<Buildings> buildingsList = buildingsRepository.findAllByNameStartingWithOrderByName(name);
         return BuildingsDto.convertToDto(buildingsList);
     }
 }

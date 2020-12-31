@@ -27,7 +27,7 @@ public class TechnologiesController {
     @GetMapping("/technologies/{name}")
     @Cacheable(value = "getTechnologiesByName")
     public List<TechnologiesDto> getTechnologiesByName(@PathVariable String name){
-        List<Technologies> technologiesList = technologiesRepository.findAllByNameContainingOrderByName(name);
+        List<Technologies> technologiesList = technologiesRepository.findAllByNameStartingWithOrderByName(name);
         return TechnologiesDto.convertToDto(technologiesList);
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UnitsRepository extends JpaRepository<Units, Long> {
 
-    List<Units> findAllByNameContainingOrderByName(String name);
-
     List<Units> findAllByOrderByName();
+
+    List<Units> findAllByNameStartingWithOrderByName(String name);
 }

@@ -27,7 +27,7 @@ public class UnitsController {
     @GetMapping("/units/{name}")
     @Cacheable(value = "getUnitsByName")
     public List<UnitsDto> getUnitsByName(@PathVariable String name){
-        List<Units> unitsList = unitsRepository.findAllByNameContainingOrderByName(name);
+        List<Units> unitsList = unitsRepository.findAllByNameStartingWithOrderByName(name);
         return UnitsDto.convertToDto(unitsList);
     }
 }

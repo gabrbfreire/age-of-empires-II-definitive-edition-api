@@ -6,7 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface TechnologiesRepository extends JpaRepository<Technologies, Long> {
-    List<Technologies> findAllByNameContainingOrderByName(String name);
 
     List<Technologies> findAllByOrderByName();
+
+    List<Technologies> findAllByNameStartingWithOrderByName(String name);
 }

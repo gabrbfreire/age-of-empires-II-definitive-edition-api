@@ -9,5 +9,5 @@ public interface BuildingsRepository extends JpaRepository<Buildings, Long> {
 
     List<Buildings> findAllByOrderByName();
 
-    List<Buildings> findAllByNameContainingOrderByName(String name);
+    List<Buildings> findAllByNameStartingWithOrderByName(String name);
 }

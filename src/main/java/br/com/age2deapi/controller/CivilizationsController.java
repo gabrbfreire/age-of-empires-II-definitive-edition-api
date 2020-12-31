@@ -27,7 +27,7 @@ public class CivilizationsController {
     @GetMapping("/civilizations/{name}")
     @Cacheable(value = "getCivilizationsByName")
     public List<CivilizationsDto> getCivilizationsByName(@PathVariable String name){
-        List<Civilizations> civilizationsList = civilizationRepository.findAllByNameContainingOrderByName(name);
+        List<Civilizations> civilizationsList = civilizationRepository.findAllByNameStartingWithOrderByName(name);
         return CivilizationsDto.convertToDto(civilizationsList);
     }
 }

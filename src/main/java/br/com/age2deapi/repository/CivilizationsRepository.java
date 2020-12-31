@@ -9,5 +9,5 @@ public interface CivilizationsRepository extends JpaRepository<Civilizations, Lo
 
     List<Civilizations> findAllByOrderByName();
 
-    List<Civilizations> findAllByNameContainingOrderByName(String name);
+    List<Civilizations> findAllByNameStartingWithOrderByName(String name);
 }
