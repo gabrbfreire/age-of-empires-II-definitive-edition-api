@@ -5,6 +5,7 @@ import br.com.age2deapi.model.Civilizations;
 import br.com.age2deapi.repository.CivilizationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,9 +27,12 @@ public class CivilizationsController {
 
     @GetMapping("/civilizations/{name}")
     @Cacheable(value = "getCivilizationsByName")
-    public List<CivilizationsDto> getCivilizationsByName(@PathVariable String name){
+    public ResponseEntity<List<CivilizationsDto>> getCivilizationsByName(@PathVariable String name){
         List<Civilizations> civilizationsList = civilizationRepository.findAllByNameStartingWithOrderByName(name);
-        return CivilizationsDto.convertToDto(civilizationsList);
+        if(!CivilizationsDto.convertToDto(civilizationsList).isEmpty()){
+            return ResponseEntity.ok(CivilizationsDto.convertToDto(civilizationsList));
+        }
+        return ResponseEntity.notFound().build();
     }
 }
 
