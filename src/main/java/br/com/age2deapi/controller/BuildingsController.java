@@ -5,6 +5,7 @@ import br.com.age2deapi.model.Buildings;
 import br.com.age2deapi.repository.BuildingsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,8 +27,11 @@ public class BuildingsController {
 
     @GetMapping("/buildings/{name}")
     @Cacheable(value = "getBuildingsByName")
-    public List<BuildingsDto> getBuildingsByName(@PathVariable String name){
+    public ResponseEntity<List<BuildingsDto>> getBuildingsByName(@PathVariable String name){
         List<Buildings> buildingsList = buildingsRepository.findAllByNameStartingWithOrderByName(name);
-        return BuildingsDto.convertToDto(buildingsList);
+        if(!BuildingsDto.convertToDto(buildingsList).isEmpty()){
+            return ResponseEntity.ok(BuildingsDto.convertToDto(buildingsList));
+        }
+        return ResponseEntity.notFound().build();
     }
 }
