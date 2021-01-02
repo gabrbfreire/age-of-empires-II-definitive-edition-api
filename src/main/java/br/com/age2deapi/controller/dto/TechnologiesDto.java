@@ -9,10 +9,10 @@ public class TechnologiesDto {
 
     private String name;
     private String introduced_in;
-    private String age;
+    private Integer age;
     private String researched_at;
     private String cost;
-    private String research_time;
+    private Integer research_time;
     private String effect;
 
     public TechnologiesDto(Technologies tech) {
@@ -41,7 +41,7 @@ public class TechnologiesDto {
         return introduced_in;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
@@ -53,7 +53,7 @@ public class TechnologiesDto {
         return cost;
     }
 
-    public String getResearch_time() {
+    public Integer getResearch_time() {
         return research_time;
     }
 

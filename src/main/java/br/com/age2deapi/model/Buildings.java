@@ -14,19 +14,19 @@ public class Buildings {
     private String name;
     private String description;
     private String introduced_in;
-    private String age;
+    private Integer age;
     private String use;
     private String cost;
-    private String construction_time;
+    private Integer construction_time;
     private String size;
-    private String hit_points;
-    private String garrison;
+    private Integer hit_points;
+    private Integer garrison;
     private String attack;
     private String attack_bonuses;
-    private String range;
+    private Integer range;
     private String accuracy;
-    private String projectile_speed;
-    private String line_of_sight;
+    private Integer projectile_speed;
+    private Integer line_of_sight;
 
     public Long getId() {
         return id;
@@ -56,11 +56,11 @@ public class Buildings {
         this.introduced_in = introduced_in;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -80,11 +80,11 @@ public class Buildings {
         this.cost = cost;
     }
 
-    public String getConstruction_time() {
+    public Integer getConstruction_time() {
         return construction_time;
     }
 
-    public void setConstruction_time(String construction_time) {
+    public void setConstruction_time(Integer construction_time) {
         this.construction_time = construction_time;
     }
 
@@ -96,19 +96,19 @@ public class Buildings {
         this.size = size;
     }
 
-    public String getHit_points() {
+    public Integer getHit_points() {
         return hit_points;
     }
 
-    public void setHit_points(String hit_points) {
+    public void setHit_points(Integer hit_points) {
         this.hit_points = hit_points;
     }
 
-    public String getGarrison() {
+    public Integer getGarrison() {
         return garrison;
     }
 
-    public void setGarrison(String garrison) {
+    public void setGarrison(Integer garrison) {
         this.garrison = garrison;
     }
 
@@ -128,11 +128,11 @@ public class Buildings {
         this.attack_bonuses = attack_bonuses;
     }
 
-    public String getRange() {
+    public Integer getRange() {
         return range;
     }
 
-    public void setRange(String range) {
+    public void setRange(Integer range) {
         this.range = range;
     }
 
@@ -144,19 +144,19 @@ public class Buildings {
         this.accuracy = accuracy;
     }
 
-    public String getProjectile_speed() {
+    public Integer getProjectile_speed() {
         return projectile_speed;
     }
 
-    public void setProjectile_speed(String projectile_speed) {
+    public void setProjectile_speed(Integer projectile_speed) {
         this.projectile_speed = projectile_speed;
     }
 
-    public String getLine_of_sight() {
+    public Integer getLine_of_sight() {
         return line_of_sight;
     }
 
-    public void setLine_of_sight(String line_of_sight) {
+    public void setLine_of_sight(Integer line_of_sight) {
         this.line_of_sight = line_of_sight;
     }
 }

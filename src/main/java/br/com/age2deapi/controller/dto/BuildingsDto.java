@@ -10,19 +10,19 @@ public class BuildingsDto {
     private String name;
     private String description;
     private String introduced_in;
-    private String age;
+    private Integer age;
     private String use;
     private String cost;
-    private String construction_time;
+    private Integer construction_time;
     private String size;
-    private String hit_points;
-    private String garrison;
+    private Integer hit_points;
+    private Integer garrison;
     private String attack;
     private String attack_bonuses;
-    private String range;
+    private Integer range;
     private String accuracy;
-    private String projectile_speed;
-    private String line_of_sight;
+    private Integer projectile_speed;
+    private Integer line_of_sight;
 
     public BuildingsDto(Buildings building) {
         this.name = building.getName();
@@ -63,7 +63,7 @@ public class BuildingsDto {
         return introduced_in;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
@@ -75,7 +75,7 @@ public class BuildingsDto {
         return cost;
     }
 
-    public String getConstruction_time() {
+    public Integer getConstruction_time() {
         return construction_time;
     }
 
@@ -83,11 +83,11 @@ public class BuildingsDto {
         return size;
     }
 
-    public String getHit_points() {
+    public Integer getHit_points() {
         return hit_points;
     }
 
-    public String getGarrison() {
+    public Integer getGarrison() {
         return garrison;
     }
 
@@ -99,7 +99,7 @@ public class BuildingsDto {
         return attack_bonuses;
     }
 
-    public String getRange() {
+    public Integer getRange() {
         return range;
     }
 
@@ -107,11 +107,11 @@ public class BuildingsDto {
         return accuracy;
     }
 
-    public String getProjectile_speed() {
+    public Integer getProjectile_speed() {
         return projectile_speed;
     }
 
-    public String getLine_of_sight() {
+    public Integer getLine_of_sight() {
         return line_of_sight;
     }
 }

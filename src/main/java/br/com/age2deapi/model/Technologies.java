@@ -13,10 +13,10 @@ public class Technologies {
     private Long id;
     private String name;
     private String introduced_in;
-    private String age;
+    private Integer age;
     private String researched_at;
     private String cost;
-    private String research_time;
+    private Integer research_time;
     private String effect;
 
     public Long getId() {
@@ -39,11 +39,11 @@ public class Technologies {
         this.introduced_in = introduced_in;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -63,11 +63,11 @@ public class Technologies {
         this.cost = cost;
     }
 
-    public String getResearch_time() {
+    public Integer getResearch_time() {
         return research_time;
     }
 
-    public void setResearch_time(String research_time) {
+    public void setResearch_time(Integer research_time) {
         this.research_time = research_time;
     }
 
