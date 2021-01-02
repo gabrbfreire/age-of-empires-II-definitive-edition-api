@@ -15,21 +15,21 @@ public class Units {
     private String description;
     private String introduced_in;
     private String type;
-    private String age;
+    private Integer age;
     private String trained_at;
     private String cost;
-    private String training_time;
-    private String hit_points;
+    private Integer training_time;
+    private Integer hit_points;
     private String attack;
     private String attack_bonuses;
     private String rate_of_fire;
-    private String melee_armor;
-    private String pierce_armor;
+    private Integer melee_armor;
+    private Integer pierce_armor;
     private String speed;
     private String line_of_sight;
     private String upgrades_to;
     private String upgrade_cost;
-    private String upgrade_time;
+    private Integer upgrade_time;
 
     public Long getId() {
         return id;
@@ -67,11 +67,11 @@ public class Units {
         this.type = type;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -91,19 +91,19 @@ public class Units {
         this.cost = cost;
     }
 
-    public String getTraining_time() {
+    public Integer getTraining_time() {
         return training_time;
     }
 
-    public void setTraining_time(String training_time) {
+    public void setTraining_time(Integer training_time) {
         this.training_time = training_time;
     }
 
-    public String getHit_points() {
+    public Integer getHit_points() {
         return hit_points;
     }
 
-    public void setHit_points(String hit_points) {
+    public void setHit_points(Integer hit_points) {
         this.hit_points = hit_points;
     }
 
@@ -131,19 +131,19 @@ public class Units {
         this.rate_of_fire = rate_of_fire;
     }
 
-    public String getMelee_armor() {
+    public Integer getMelee_armor() {
         return melee_armor;
     }
 
-    public void setMelee_armor(String melee_armor) {
+    public void setMelee_armor(Integer melee_armor) {
         this.melee_armor = melee_armor;
     }
 
-    public String getPierce_armor() {
+    public Integer getPierce_armor() {
         return pierce_armor;
     }
 
-    public void setPierce_armor(String pierce_armor) {
+    public void setPierce_armor(Integer pierce_armor) {
         this.pierce_armor = pierce_armor;
     }
 
@@ -179,11 +179,11 @@ public class Units {
         this.upgrade_cost = upgrade_cost;
     }
 
-    public String getUpgrade_time() {
+    public Integer getUpgrade_time() {
         return upgrade_time;
     }
 
-    public void setUpgrade_time(String upgrade_time) {
+    public void setUpgrade_time(Integer upgrade_time) {
         this.upgrade_time = upgrade_time;
     }
 }
