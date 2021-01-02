@@ -26,7 +26,7 @@ public class SwaggerConfigurations {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Age of Empires II:DE API")
-                .description("API for Age of Empires II: DE Using Spring and MySQL. Provides data about: buildings, civilizations, technologies and units")
+                .description("API for Age of Empires II: DE Using Spring and MySQL. Provides data about: buildings, civilizations, technologies and units.")
                 .version("1.0.0")
                 .build();
     }
