@@ -19,7 +19,7 @@ Technologies:
 - ### GET `/buildings/{name:string}`
   Gets a list of all buildings in alphabetical order that match the input
   
-  Example call `https://aoe2de-api.herokuapp.com/buildings/Castle`
+  Example call `https://aoe2de-api.herokuapp.com/buildings/castle`
 
 ```
 [
@@ -77,7 +77,7 @@ Technologies:
 - ### GET `/technologies/{name:string}`
   Gets a list of all technologies in alphabetical order that match the input
   
-  Example call `https://aoe2de-api.herokuapp.com/technologies/Architecture`
+  Example call `https://aoe2de-api.herokuapp.com/technologies/architecture`
 
 ```
 [
@@ -89,6 +89,42 @@ Technologies:
     "cost": "300F, 200W",
     "research_time": 70,
     "effect": "Buildings +10% HP, +1 armor, +1 pierce armor, +3 building armor"
+  }
+]
+```
+
+- ### GET `/units`
+  Gets a list of all units in alphabetical order
+  
+  Call `https://aoe2de-api.herokuapp.com/units`
+ 
+- ### GET `/units/{name:string}`
+  Gets a list of all units in alphabetical order that match the input
+  
+  Example call `https://aoe2de-api.herokuapp.com/units/archer`
+
+```
+[
+  {
+    "name": "Archer",
+    "description": "Quick and light. Weak at close range; excels at battle from distance.",
+    "introduced_in": "The Age of Kings",
+    "type": "Archer",
+    "age": 2,
+    "trained_at": "Archery Range",
+    "cost": "25W, 45G",
+    "training_time": 35,
+    "hit_points": 30,
+    "attack": "4 pierce",
+    "attack_bonuses": "+3 vs Spearman",
+    "rate_of_fire": "2.0",
+    "melee_armor": 0,
+    "pierce_armor": 0,
+    "speed": "0.96",
+    "line_of_sight": "6",
+    "upgrades_to": "Crossbowman",
+    "upgrade_cost": "125F, 75G",
+    "upgrade_time": 35
   }
 ]
 ```
