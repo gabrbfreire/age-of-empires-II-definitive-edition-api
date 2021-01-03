@@ -1,6 +1,8 @@
 # Age of Empires II:DE API
 
-API available at : https://aoe2de-api.herokuapp.com/swagger-ui.html#/Content
+API available at : https://aoe2de-api.herokuapp.com
+
+Provides data about: buildings, civilizations, technologies and units.
 
 Technologies:
 * Java
