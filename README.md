@@ -11,8 +11,13 @@ Technologies:
 * Swagger
 
 ## Utilization
-
-Example Call `https://aoe2de-api.herokuapp.com/civilizations/aztecs`
+- ### GET `/buildings`
+  Gets a list of all buildings in alphabetical order
+ 
+- ### GET `/buildings/{name:string}`
+  Gets a list of all buildings in alphabetical order that match the input
+  
+  Example call `https://aoe2de-api.herokuapp.com/civilizations/aztecs`
 
 ```
 [
