@@ -4,7 +4,7 @@ API available at : https://aoe2de-api.herokuapp.com
 
 Provides data about: buildings, civilizations, technologies and units.
 
-Technologies:
+Build with:
 * Java
 * Spring(Spring Boot and Spring Data)
 * MySQL
